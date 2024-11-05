@@ -1,4 +1,7 @@
 # Node modules
 node_modules/
 
+# Build output
+build/
+
 package-lock.json
