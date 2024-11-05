@@ -33,9 +33,10 @@
 }
 
 .important-label {
-  grid-row: 2 / span 2;
+  grid-row: 1 / span 2;
   grid-column: 1 / 2;
   writing-mode: vertical-rl;
+  transform: rotate(180deg); /* Flip to read bottom to top */
   text-align: center;
 }
 
@@ -43,12 +44,13 @@
   grid-row: 3 / span 2;
   grid-column: 1 / 2;
   writing-mode: vertical-rl;
+  transform: rotate(180deg); /* Flip to read bottom to top */
   text-align: center;
 }
 
 .urgent-label {
   grid-row: 1 / 2;
-  grid-column: 2 / span 2;
+  grid-column: 1 / span 2;
   text-align: center;
   align-self: center;
   justify-self: center;
