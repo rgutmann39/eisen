@@ -1,0 +1,61 @@
+# template.yaml
+Resources:
+  # Lambda function for creating a task
+  CreateTaskFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: create_task.lambda_handler  # File and handler name for "create" function
+      Runtime: python3.8
+      CodeUri: ./src  # Directory containing all function code
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          TABLE_NAME: "Tasks"
+      Policies:
+        - AmazonDynamoDBFullAccess
+
+  # Lambda function for reading a task
+  ReadTaskFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: read_task.lambda_handler  # File and handler name for "read" function
+      Runtime: python3.8
+      CodeUri: ./src
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          TABLE_NAME: "Tasks"
+      Policies:
+        - AmazonDynamoDBFullAccess
+
+  # Lambda function for updating a task
+  UpdateTaskFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: update_task.lambda_handler  # File and handler name for "update" function
+      Runtime: python3.8
+      CodeUri: ./src
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          TABLE_NAME: "Tasks"
+      Policies:
+        - AmazonDynamoDBFullAccess
+
+  # Lambda function for deleting a task
+  DeleteTaskFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: delete_task.lambda_handler  # File and handler name for "delete" function
+      Runtime: python3.8
+      CodeUri: ./src
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          TABLE_NAME: "Tasks"
+      Policies:
+        - AmazonDynamoDBFullAccess
