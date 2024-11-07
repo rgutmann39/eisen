@@ -117,11 +117,6 @@
   margin-top: 10px;
 }
 
-/* Add extra margin to the first task item to separate it from the + button
-.cell .task-item:first-child {
-  margin-top: 100px;
-} */
-
 .task-item button {
   font-size: 14px;
   padding: 2px 6px;
