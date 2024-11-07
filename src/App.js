@@ -56,7 +56,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1 className="title">Quadrant Task Manager</h1>
+      <h1 className="title">Eisenhower Matrix ScratchPad</h1>
       <div className="matrix">
         <div className="axis-label important-label">Important</div>
         <div className="axis-label urgent-label">Urgent</div>
