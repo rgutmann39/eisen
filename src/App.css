@@ -109,12 +109,18 @@
   top: 5px;
 }
 
+/* Adjust the first task item to have extra margin */
 .task-item {
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
+
+/* Add extra margin to the first task item to separate it from the + button
+.cell .task-item:first-child {
+  margin-top: 100px;
+} */
 
 .task-item button {
   font-size: 14px;
